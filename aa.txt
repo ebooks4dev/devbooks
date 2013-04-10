@@ -1,0 +1,5 @@
+Select FullName, SystemUserId, OrganizationId
+From FilteredSystemUser
+Order by FullName
+
+Data Source=fcv-crmsql;Initial Catalog=FCV_MSCRM_Report
