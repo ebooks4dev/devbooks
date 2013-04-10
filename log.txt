@@ -1,0 +1,28 @@
+USE [FCV_MSCRM_Report]
+GO
+
+/****** Object:  UserDefinedFunction [dbo].[ToLocalTime]    Script Date: 4/4/2013 1:24:07 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		Phuoc.Le
+-- =============================================
+CREATE FUNCTION [dbo].[ToLocalTime]
+(
+	-- Add the parameters for the function here
+	@utcTime DATETIME
+)
+RETURNS DATETIME
+AS
+BEGIN	
+	DECLARE @value DATETIME
+	SET @value = DATEADD(HOUR, 7, @utcTime)
+	RETURN @value
+END
+GO
+
+
